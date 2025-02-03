@@ -45,7 +45,7 @@ namespace CurrencyBot.Services
             {
                 await _botClient.SendMessage(message.Chat.Id, "Welcome to Currency Exchange Bot!\n" +
                     "Send date and currency in following format to get exchange rate to UAH\n" +
-                    "USD dd.mm.yyy", cancellationToken: cancellationToken);
+                    "USD dd.mm.yyyy", cancellationToken: cancellationToken);
             }
             else if (words.Length == 1 && message.Text == "/info")
             {
@@ -77,7 +77,7 @@ namespace CurrencyBot.Services
             else
             {
                 await _botClient.SendMessage(message.Chat.Id, "Invalid input. Please send date and currency in following format to get exchange rate to UAH\n" +
-                    "USD dd.mm.yyy", cancellationToken: cancellationToken);
+                    "USD dd.mm.yyyy", cancellationToken: cancellationToken);
             }
         }
 
